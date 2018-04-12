@@ -9,12 +9,22 @@
 		background: black;
 		/* 색상코드 대신 색상 이름을 사용하는 게 웹 접근성에 좋으려나...? */
 	}
+	h2 {
+		color: purple;
+		background: yellow;
+	}
+	h3 {
+		color: red;
+		background: cyan;
+	}
 	</style>
 </head>
 <body>
 	<!-- Vue를 쓰지 말란 말은 없었는데! -->
 	<div id="vue-root">
 		<h1>만나서 {{rand}}% 정도 반가워요...</h1>
+		<h2>쓸 내용이 필요해요</h2>
+		<h3>좋은 IDE도 필요해요</h3>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="app.js"></script>
