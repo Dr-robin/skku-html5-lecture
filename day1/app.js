@@ -2,7 +2,7 @@ let app = new Vue({
 	el: '#vue-root',
 	computed: {
 		rand() {
-			return Math.floor(100 * Math.random());
+			return Math.round(100 * Math.random());
 		}
 	}
 });
