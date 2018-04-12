@@ -1,0 +1,13 @@
+h1 {
+  color: white;
+  background: black;
+  /* 색상코드 대신 색상 이름을 사용하는 게 웹 접근성에 좋으려나...? */
+}
+h2 {
+  color: purple;
+  background: yellow;
+}
+h3 {
+  color: red;
+  background: cyan;
+}
