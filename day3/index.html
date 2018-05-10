@@ -2,10 +2,42 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8">
-    <title>제목</title>
+    <title>태그 너무 조아</title>
+    <style>
+      div {
+        border: 1px solid #000;
+        margin: 5px;
+      }
+      span {
+        border: 1px solid #ccc;
+        margin: 2px;
+      }
+      .display-inline {
+        display: inline;
+      }
+      .display-inlineblock {
+        display: inline-block;
+      }
+      .display-flex {
+        display: flex;
+      }
+      .display-flex>span {
+        flex: 1;
+      }
+    </style>
   </head>
   <body>
     <img src="http://via.placeholder.com/400x240" alt="의미없는 사진">
     <img src="http://example.com/nopage" alt="없는 사진">
+    <div>블록1</div>
+    <div class="display-inline">인라인이 되고 싶은 블록2</div>
+    <div>블록3</div>
+    <div>블록4</div>
+    <div class="display-inlineblock">인라인블록이 되고 싶은 블록5</div>
+    <div class="display-flex">
+      <span>사실</span>
+      <span>플렉스가</span>
+      <span>짱</span>
+    </div>
   </body>
 </html>
