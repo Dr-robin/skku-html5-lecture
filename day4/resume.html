@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>이력서</title>
+    <style>
+        section, body>div, #image, .input-group {
+            display: flex;
+        }
+        #image {
+            width: 200px;
+            height: 250px;
+            border: 1px solid #000;
+            background-color: #999;
+        }
+        #profile {
+            flex: 1;
+        }
+        .input-group {
+            margin-bottom: 10px;
+        }
+        .input-group label {
+            width: 100px;
+        }
+        .input-group>input {
+            padding: 2px;
+            height: 20px;
+            border: none;
+            border-bottom: 1px solid #666;
+            width: 300px;
+        }
+        .align-center {
+            text-align: center;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<h1>이 력 서</h1>
+<section>
+    <div id="image">
+        <p class="align-center">사진사진</p>
+    </div>
+    <div id="profile">
+        <div class="input-group"><label for="name">이름</label><input type="text" id="name"></div>
+        <div class="input-group"><label for="year">생일</label><input type="date" id="year"></div>
+        <div class="input-group"><label for="email">이메일</label><input type="email" id="email"></div>
+        <div class="input-group"><label for="phone">휴대전화</label><input type="tel" id="phone"></div>
+        <div class="input-group"><label>학년</label>
+            <span class="radio-group">
+                <label>
+                    1학년
+                    <input type="radio" name="grade" value="1">
+                </label>
+                <label>
+                    2학년
+                    <input type="radio" name="grade" value="2">
+                </label>
+                <label>
+                    3학년
+                    <input type="radio" name="grade" value="3">
+                </label>
+            </span>
+        </div>
+    </div>
+</section>
+</body>
+</html>
