@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>유튜브 큐레이터</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="//use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+</head>
+<body>
+    <header>유튜브 큐레이터</header>
+    <div class="container" id="app">
+        <div class="card" v-for="v in videos">
+            <h2>{{v.title}}</h2>
+            <iframe :src="getURL(v.id)" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <p>{{v.comment}}</p>
+            <button @click="like(v)"><i class="far fa-thumbs-up"></i> {{v.like}}</button>
+            <!--<button> <i class="far fa-comment"></i> 0</button>-->
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="script.js"></script>
+</body>
+</html>
