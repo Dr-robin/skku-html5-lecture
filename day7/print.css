@@ -1,0 +1,8 @@
+@media print {
+    h1:before {
+        content: "너 프린터지!! ";
+    }
+    body {
+        background-color: #9fc;
+    }
+}
