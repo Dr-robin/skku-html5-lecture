@@ -23,6 +23,7 @@ header {
 }
 .container {
     width: 660px;
+    max-width: 100%;
     margin: 3rem auto 0;
 }
 .card {
@@ -42,4 +43,13 @@ header {
     border: none;
     background: none;
     font-size: 1rem;
+}
+@media (max-width: 680px) {
+    .container {
+        margin: 3rem 10px 0;
+    }
+    .card iframe {
+        width: 100vw;
+        height: 56.25vw;
+    }
 }
