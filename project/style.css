@@ -45,11 +45,11 @@ header {
     font-size: 1rem;
 }
 @media (max-width: 680px) {
-    .container {
-        margin: 3rem 10px 0;
+    .card {
+        margin: 10px 10px 0;
     }
     .card iframe {
-        width: 100vw;
-        height: 56.25vw;
+        width: calc(100vw - 20px);
+        height: 56vw;
     }
 }
