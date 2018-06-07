@@ -10,6 +10,17 @@
 <body>
     <header>유튜브 큐레이터</header>
     <div class="container" id="app">
+        <div class="card" id="card-add">
+            <section>
+                <label for="url">유튜브 주소</label>
+                <input id="url" type="url">
+            </section>
+            <section>
+                <label for="comment">설명</label>
+                <input id="comment" type="text">
+                <button>추가</button>
+            </section>
+        </div>
         <div class="card" v-for="v in videos">
             <h2>{{v.title}}</h2>
             <iframe :src="getURL(v.id)" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>

@@ -26,6 +26,13 @@ header {
     max-width: 100%;
     margin: 3rem auto 0;
 }
+#card-add section {
+    display: flex;
+    margin-bottom: 5px;
+}
+#card-add input {
+    flex: 1;
+}
 .card {
     background-color: #fff;
     padding: 10px;
