@@ -281,42 +281,6 @@
             <p class="paper-text">쓴사람 누구누구</p>
         </div>
     </div>
-    <div class="paper">
-        <div class="paper-holder">
-            <a><img src="http://placehold.it/190x150"></a>
-        </div>
-        <p class="paper-description">이미지 설명 어쩌구 저쩌구</p>
-        <div class="paper-content">
-            <a href="#" class="paper-link">
-                <img src="http://placehold.it/50x50" alt="의미없는 채우기링크">
-            </a>
-            <p class="paper-text">쓴사람 누구누구</p>
-        </div>
-    </div>
-    <div class="paper">
-        <div class="paper-holder">
-            <a><img src="http://placehold.it/190x150"></a>
-        </div>
-        <p class="paper-description">이미지 설명 어쩌구 저쩌구</p>
-        <div class="paper-content">
-            <a href="#" class="paper-link">
-                <img src="http://placehold.it/50x50" alt="의미없는 채우기링크">
-            </a>
-            <p class="paper-text">쓴사람 누구누구</p>
-        </div>
-    </div>
-    <div class="paper">
-        <div class="paper-holder">
-            <a><img src="http://placehold.it/190x150"></a>
-        </div>
-        <p class="paper-description">이미지 설명 어쩌구 저쩌구</p>
-        <div class="paper-content">
-            <a href="#" class="paper-link">
-                <img src="http://placehold.it/50x50" alt="의미없는 채우기링크">
-            </a>
-            <p class="paper-text">쓴사람 누구누구</p>
-        </div>
-    </div>
 
     <!-- .paper 반복 끝 -->
 
@@ -341,6 +305,7 @@
 <script src="js/jquery.masonry.min.js"></script>
 <script>
     $(document).ready(() => {
+        let m;
         // 풀다운 메뉴
         $('.outer-menu').hover(function() {
             $(this).find('.inner-menu').slideDown();
@@ -349,7 +314,7 @@
         });
         // 페이지
         $('#section-main').imagesLoaded(() => {
-            $('#section-main').masonry({itemSelector: '.paper', columnWidth: 230, isAnimated: true});
+            m = $('#section-main').masonry({itemSelector: '.paper', columnWidth: 230, isAnimated: true});
         });
         // 라이트박스
         function showLightBox() {
@@ -366,6 +331,29 @@
         $('#lightbox').click((e) => {
             e.stopPropagation();
         })
+        setInterval(() => {
+            if(m) {
+                let height = 50 + Math.round(Math.random() * 250);
+                let elem = $(`<div class="paper">
+        <div class="paper-holder">
+            <a><img src="http://placehold.it/190x${height}"></a>
+        </div>
+        <p class="paper-description">이미지 설명 어쩌구 저쩌구</p>
+        <div class="paper-content">
+            <a href="#" class="paper-link">
+                <img src="http://placehold.it/50x50" alt="의미없는 채우기링크">
+            </a>
+            <p class="paper-text">쓴사람 누구누구</p>
+        </div>
+    </div>`);
+                elem.hide();
+                elem.imagesLoaded(() => {
+                    m.masonry('appended', elem);
+                    elem.show();
+                });
+                $('#section-main').append(elem);
+            }
+        }, 1000);
     });
 </script>
 </body>
